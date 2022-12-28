@@ -1,0 +1,86 @@
+{% extends 'reseller/reseller_master.html' %}
+{% load static %}
+{% block content %}
+<link rel="stylesheet" href="static/assets/css/add_pro.css">
+    
+    
+
+  <div id="main">
+    <h1 style="color: brown;"><center>ADD PRODUCT</center></h1>
+    <div class="container">
+        <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <div class="row">
+            <div class="col-25">
+              <label for="fname">Category</label>
+            </div>
+            <div class="col-75">
+              <!-- <input type="text" id="fname" name="firstname" placeholder="clothing"> -->
+
+              <select name="p_cat" id="">
+                <option value="clothing">clothing</option>
+                <option value="Electronics">Electronics</option>
+                <option value="Shoes">Shoes</option>
+                <option value="Watches">Watches</option>
+                <option value="Jwellery">Jwellery</option>
+              </select>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Product Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="p_name" placeholder=" ">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Product No</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="p_no" placeholder=" ">
+            </div>
+          </div>
+          
+          <div class="row">
+            <div class="col-25">
+              <label for="subject">Product Description</label>
+            </div>
+            <div class="col-75">
+              <textarea id="subject" name="p_desc" placeholder="Write something.." style="height:100px"></textarea>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Price</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="p_price" placeholder=" ">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Avialable Stock</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="lname" name="p_stock" placeholder=" ">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-25">
+              <label for="lname">Upload image</label>
+            </div>
+            <div class="col-75">
+              <input type="file" id="lname" name="p_img" placeholder="choose File   No file choosen ">
+            </div>
+          </div><br><br>
+
+          <div class="row1">
+            <input type="submit" value="Add" id="btn" >
+            <span>{{status}}</span>
+          </div>
+        </form>
+      </div>
+      
+    {% endblock %}

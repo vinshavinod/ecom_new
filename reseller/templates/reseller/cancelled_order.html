@@ -1,0 +1,42 @@
+{% extends 'reseller/reseller_master.html' %}
+    {% load static %}
+    {% block content %}
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    
+
+
+
+    <center><h1 style="color: brown;">CANCELLED ORDERS</center></h1>
+    <table border="2" width="100%" >
+        
+   
+        <tr>
+            <th>SL.NO</th>
+            <TH>ORDER DATE</TH>
+            <TH>PRODUCT.NO</TH>
+            <TH>PRODUCT NAME</TH>
+            <TH>CUSTOMER NAME</TH>
+            <TH>MOBILE NO</TH>
+            <TH>SHIPPING ADDRESS</TH>
+            <TH>QTY</TH>
+            <TH>TOTAL AMOUNT</TH>
+        </tr>
+        <tr>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+        </tr>
+        
+    </table>
+
+   {% endblock %}

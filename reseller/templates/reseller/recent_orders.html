@@ -1,0 +1,40 @@
+{% extends 'reseller/reseller_master.html' %}
+{% load static %}
+{% block content %}
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    
+
+    <center><h1 style="color: brown;">RECENT ORDERS</center></h1>
+    <table border="2" width="100%" >
+        
+   
+        <tr>
+            <th>SL.NO</th>
+            <TH>ORDER DATE</TH>
+            <TH>PRODUCT.NO</TH>
+            <TH>PRODUCT NAME</TH>
+            <TH>CUSTOMER NAME</TH>
+            <TH>MOBILE NO</TH>
+            <TH>SHIPPING ADDRESS</TH>
+            <TH>QTY</TH>
+            <TH>TOTAL AMOUNT</TH>
+        </tr>
+        <tr>
+            <th> 1 </th>
+            <th> 11/10/2022 </th>
+            <th> p-109297 </th>
+            <th> Iphone 5s </th>
+            <th> Rifad </th>
+            <th> 8798954544 </th>
+            <th>  kannur,thalassery</th>
+            <th>  1</th>
+            <th> Rs 50000 </th>
+        </tr>
+        
+        
+    </table>
+    {% endblock %}

@@ -1,0 +1,47 @@
+{% extends 'ecom_admin/admin_master.html' %}
+{% load static %}
+
+
+{% block content %}
+
+<div class="row">
+    <div class="col-12">
+        <marquee behavior="" direction="right"><h1><p class="welcome" > Welcome Admin </p></h1></marquee>
+        
+        
+    </div>
+</div>
+
+
+
+<div class="row">
+    <div class="col-1"></div>
+    <div class="col-3">
+        <div class="card" style="width: 18rem;">
+            
+            <div class="card-body">
+              <h2 class="card-title">Customer Count</h2>
+              <p class="card-text"> <h3>{{customer_count}}</h3></p> 
+              <!-- to display the count of customers,The count function is calling from views.py[count()] and the count of the customer is passing from views.py-->
+              
+            </div>
+          </div>
+    </div>
+    <div class="col-4"></div>
+    <div class="col-3">
+        <div class="card" style="width: 18rem;">
+            
+            <div class="card-body">
+              <h2 class="card-title">Seller Count</h2>
+              <p class="card-text"> <h3>{{seller_count}}</h3> </p>
+              <!-- To display the count of resellers,The count function is calling from views.py[count()] -->
+              
+            </div>
+          </div>
+
+    </div>
+    <div class="col-1"></div>
+    </div>
+    
+
+{% endblock %}

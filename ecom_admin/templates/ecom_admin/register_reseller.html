@@ -1,0 +1,59 @@
+
+    {% extends 'ecom_admin/admin_master.html' %}
+    {% load static %}
+    {% block content %}
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    
+
+
+
+    <center><h1 style="color: brown;">REGISTER RESELLERS</center></h1>
+<div class="row">
+ {% for reseller in resellers %}
+    <div class="col-3">
+        <div class="card" style="width: 18rem;">
+            
+            <div class="card-body">
+              <h3 class="card-title">{{reseller.s_name}}</h3>
+              <p class="card-text"> {{reseller.mobile}}<h3></h3></p> 
+              <p class="card-text"> {{reseller.email}}<h3></h3></p> 
+              <p class="card-text"> {{reseller.address}}<h3></h3></p> 
+              
+            </div>
+          </div>
+    </div>
+    {% endfor %}
+</div>
+    <!-- <table border="2" width="100%" >
+        
+   
+        <tr>
+            <th>SL.NO</th>
+            <TH>ORDER DATE</TH>
+            <TH>PRODUCT.NO</TH>
+            <TH>PRODUCT NAME</TH>
+            <TH>CUSTOMER NAME</TH>
+            <TH>MOBILE NO</TH>
+            <TH>SHIPPING ADDRESS</TH>
+            <TH>QTY</TH>
+            <TH>TOTAL AMOUNT</TH>
+        </tr>
+        <tr>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+            <th>  </th>
+        </tr>
+        
+    </table> -->
+
+    {% endblock %}

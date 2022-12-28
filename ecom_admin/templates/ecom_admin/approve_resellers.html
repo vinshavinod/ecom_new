@@ -1,0 +1,45 @@
+
+    {% extends 'ecom_admin/admin_master.html' %}
+    {% load static %}
+    {% block content %}
+    <style>
+        table, th, td {
+          border:1px solid black;
+        }
+        </style>
+    
+
+
+
+    <center><h1 style="color: brown;">APPROVE RESELLERS</center></h1>
+    <table border="2" width="100%" >
+        
+   
+        <tr>
+            <th>SL.NO</th>
+            <th>NAME</th>
+            <th>EMAIL</th>
+            <th>MOBILE</th>
+            <th>ADDRESS</th>
+            <th>ACCOUNT NUMBER</th>
+            <th>PHOTO</th>
+            <th>ACTION</th>
+            
+        </tr>
+        {% for reseller in pending %}
+        <tr>
+            <th> {{forloop.counter}} </th>
+            <th> {{reseller.s_name}} </th>
+            <th> {{reseller.email}} </th>
+            <th> {{reseller.mobile}} </th>
+            <th> {{reseller.address}}  </th>
+            <th> {{reseller.account_number}}</th>
+            <th> <img src="{{reseller.upload_image.url}}" alt="" width="100px" height="100px"> </th>
+            <th> <a href="{% url 'ecom_admin:status_approve' reseller.id %}" class="btn">Approve</a> </th>
+            
+        </tr>
+        {% endfor %}
+        
+    </table>
+
+    {% endblock %}

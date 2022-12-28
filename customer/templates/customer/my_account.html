@@ -1,0 +1,281 @@
+{% extends 'customer/customer_master.html' %}
+{% load static %}
+
+
+
+
+<!-- ============================================== HEADER ============================================== -->
+
+<!-- ============================================== HEADER : END ============================================== -->
+{% block content %}
+
+<div class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-inner">
+            <ul class="list-inline list-unstyled">
+                <li><a href="#">Home</a></li>
+                <li class='active'>my account</li>
+            </ul>
+        </div><!-- /.breadcrumb-inner -->
+    </div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+
+                    <div class="panel-group checkout-steps" id="accordion">
+                        <!-- checkout-step-01  -->
+                        <div class="panel panel-default checkout-step-01">
+
+                            <!-- panel-heading -->
+                            <div class="panel-heading">
+                                <h4 class="unicase-checkout-title">
+                                    <a data-toggle="collapse" class="" data-parent="#accordion" href="#collapseOne">
+                                        <span></span>my account
+                                    </a>
+                                </h4>
+                            </div>
+                            <!-- panel-heading -->
+
+                            <div id="collapseOne" class="panel-collapse collapse in">
+
+                                <!-- panel-body  -->
+                                <div class="panel-body">
+                                    <div class="row">
+
+                                        <!-- guest-login -->
+                                        <div class="col-md-6 col-sm-6 guest-login">
+                                            <h4 class="checkout-subtitle"></h4>
+                                            <p class="text title-tag-line"></p>
+
+                                            <section class="vh-100" style="background-color:white;">
+                                                <div class="container py-5 h-100">
+                                                    <div
+                                                        class="row d-flex justify-content-center align-items-center h-100">
+                                                        <div class="col col-md-9 col-lg-7 col-xl-5">
+                                                            <div class="card" style="border-radius: 15px;">
+                                                                <div class="card-body p-4">
+                                                                    <div class="d-flex text-black">
+                                                                        <div class="flex-shrink-0">
+                                                                            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-profiles/avatar-1.webp"
+                                                                                alt="Generic placeholder image"
+                                                                                class="img-fluid"
+                                                                                style="width: 180px; border-radius: 10px;">
+                                                                        </div>
+                                                                        <!-- <div class="flex-grow-1 ms-3"> -->
+                                                                        <center> <b>
+                                                                                <h3 class="mb-1">Danny McLoan</h3>
+                                                                            </b></center>
+
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </section>
+
+                                           
+
+                                            <h4 class="checkout-subtitle outer-top-vs"></h4>
+                                            <p class="text title-tag-line "></p>
+
+                                            <ul class="text instruction inner-bottom-30">
+                                                <li class="save-time-reg"></li>
+                                                <li></li>
+                                            </ul>
+                                        </div>
+                                        <!-- guest-login -->
+
+
+                                        <!-- details start -->
+
+                                        <div class="col-md-6 col-sm-6 already-registered-login">
+                                            <h4 class="checkout-subtitle"></h4>
+                                            <p class="text title-tag-line"></p>
+                                            <form class="register-form" role="form">
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputname">full
+                                                        name<span>*</span></label>
+                                                    
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputEmail1">Email Address
+                                                        <span>*</span></label>
+                                                    <input type="email"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputEmail1" placeholder="">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputaddress">address
+                                                        <span>*</span></label>
+                                                    <input type="address"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputaddress" placeholder="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputmobile">mobile
+                                                        <span>*</span></label>
+                                                    <input type="mobile number"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputmobile" placeholder="">
+                                                    <a href="#" class="forgot-password"></a>
+                                                </div>
+                                                <button type="submit"
+                                                    class="btn-upper btn btn-primary checkout-page-button">save
+                                                    changes</button>
+                                            </form>
+                                        </div>
+
+
+                                        <!-- end  -->
+
+                                        <!-- already-registered-login -->
+                                        <!-- <div class="col-md-6 col-sm-6 already-registered-login">
+                                            <h4 class="checkout-subtitle"></h4>
+                                            <p class="text title-tag-line"></p>
+                                            <form class="register-form" role="form">
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputname">full
+                                                        name<span>*</span></label>
+                                                    <input type="name"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputname" placeholder="">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputEmail1">Email Address
+                                                        <span>*</span></label>
+                                                    <input type="email"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputEmail1" placeholder="">
+                                                </div>
+
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputaddress">address
+                                                        <span>*</span></label>
+                                                    <input type="address"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputaddress" placeholder="">
+                                                </div>
+                                                <div class="form-group">
+                                                    <label class="info-title" for="exampleInputmobile">mobile
+                                                        <span>*</span></label>
+                                                    <input type="mobile number"
+                                                        class="form-control unicase-form-control text-input"
+                                                        id="exampleInputmobile" placeholder="">
+                                                    <a href="#" class="forgot-password"></a>
+                                                </div>
+                                                <button type="submit"
+                                                    class="btn-upper btn btn-primary checkout-page-button">save
+                                                    changes</button>
+                                            </form>
+                                        </div> -->
+                                        <!-- already-registered-login -->
+
+                                    </div>
+                                </div>
+                                <!-- panel-body  -->
+
+                            </div><!-- row -->
+                        </div>
+                        
+                        <!-- ============================================== BRANDS CAROUSEL ============================================== -->
+                        <div id="brands-carousel" class="logo-slider wow fadeInUp">
+
+                            <div class="logo-slider-inner">
+                                <div id="brand-slider" class="owl-carousel brand-slider custom-carousel owl-theme">
+                                    <div class="item m-t-15">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand1.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item m-t-10">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand2.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand3.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand4.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand5.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand6.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand2.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand4.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand1.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    </div>
+                                    <!--/.item-->
+
+                                    <div class="item">
+                                        <a href="#" class="image">
+                                            <img data-echo="static/assets/images/brands/brand5.png"
+                                                src="static/assets/images/blank.gif" alt="">
+                                        </a>
+                                    <!-- </div> -->
+                                    <!--/.item-->
+                                </div><!-- /.owl-carousel #logo-slider -->
+                            </div><!-- /.logo-slider-inner -->
+
+                        </div><!-- /.logo-slider -->
+                        <!-- ============================================== BRANDS CAROUSEL : END ============================================== -->
+                    </div><!-- /.container -->
+                    <!-- </div> -->
+                    <!-- ============================================================= FOOTER ============================================================= -->
+
+
+                   
+                    <!-- ============================================== INFO BOXES : END ============================================== -->
+
+                    <!-- ============================================================= FOOTER : END============================================================= -->
+                    {% endblock %}

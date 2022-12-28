@@ -1,0 +1,130 @@
+{% extends 'customer/customer_master.html' %}
+{% load static %}
+
+{% block content %}
+<div class="body-content outer-top-xs">
+    <div class='container'>
+        <div class='row single-product'>
+            <div class='col-xs-12 col-sm-12 col-md-3 sidebar'>
+                <div class="sidebar-module-container">
+                    <div class="home-banner outer-top-n outer-bottom-xs">
+                        <img src="{{ product_detail.p_image.url }}" alt="Image">
+                    </div>
+
+
+                </div>
+            </div>
+
+
+                            </div>
+                            <!-- /.single-product-gallery -->
+                        </div><!-- /.gallery-holder -->
+                        <div class='col-sm-12 col-md-8 col-lg-8 product-info-block'>
+                            <div class="product-info">
+                                <h1 class="name">{{ product_detail.p_name }}</h1>
+
+                                
+
+                                <div class="stock-container info-container m-t-10">
+                                    <div class="row">
+                                        <div class="col-lg-12">
+                                            <div class="pull-left">
+                                                <div class="stock-box">
+                                                    <span class="">Availability : {{ product_detail.p_stock }}</span>
+                                                </div>
+                                            </div>
+                                            <div class="pull-left">
+                                                <div class="stock-box">
+                                                    <span class="value" id="instock">In Stock</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div><!-- /.row -->
+                                </div><!-- /.stock-container -->
+
+                                <div class="description-container m-t-20">
+                                    <p>{{ product_detail.p_description }}
+                                    </p>
+                                    
+                                </div>
+
+                                <!-- /.description-container -->
+
+                                <div class="price-container info-container m-t-30">
+                                    <div class="row">
+
+
+                                        <div class="col-sm-6 col-xs-6">
+                                            <div class="price-box">
+                                                <span class="price">Rs: {{ product_detail.p_price }}</span>
+                                                <!-- <span class="price-strike">$900.00</span> -->
+                                            </div>
+                                        </div>
+
+                                        
+
+                                    </div><!-- /.row -->
+                                </div><!-- /.price-container -->
+
+                                <div class="quantity-container info-container">
+                                    <div class="row">
+
+                                        <div class="qty">
+                                            <label id="out"></label>
+                                            <span class="">Qty :</span>
+                                        </div>
+                                        <form action="" method="POST">
+                                            {% csrf_token %}
+                                            <div class="qty-count">
+                                                <div class="cart-quantity">
+                                                    
+                                                    <div class="quant-input">
+                                                        <!-- <div class="arrows">
+                                                            <div class="arrow plus gradient"><span class="ir"><i
+                                                                        class="icon fa fa-sort-asc"></i></span></div>
+                                                            <div class="arrow minus gradient"><span class="ir"><i
+                                                                        class="icon fa fa-sort-desc"></i></span></div>
+                                                        </div> -->
+                                                        <div>
+                                                            
+                                                        </div>
+                                                        <input type="number" value="1" name="qty" id="qty" onchange="">
+                                                        
+                                                        
+                                                    </div>
+                                                    
+                                                </div>
+                                            </div>
+                                            <input type="hidden" value="{{product_detail.id}}" name="pid" id="pid">
+                                            <div class="add-btn">
+                                                
+                                                        <button class="btn btn-primary" type="submit"><i
+                                                            class="fa fa-shopping-cart inner-right-vs"></i> ADD TO CART</button>
+                                            </div>
+                                        </form>
+                                        
+                                    
+
+                                    </div><!-- /.row -->
+                                </div><!-- /.quantity-container -->
+
+
+
+
+
+
+                            </div><!-- /.product-info -->
+                        </div>
+                        <!-- /.col-sm-7 -->
+                    </div><!-- /.row -->
+                </div>
+
+
+
+            </div><!-- /.col -->
+            <div class="clearfix"></div>
+        </div><!-- /.row -->
+       
+    </div><!-- /.container -->
+</div><!-- /.body-content -->
+{% endblock %}

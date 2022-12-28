@@ -1,0 +1,55 @@
+{% load static %}
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Login Form</title>    
+    <link rel="stylesheet" href="static/assets/css/login.css">  
+    <style>
+        body{
+            padding-top: 150px;
+            
+        }
+        #log1{
+            width: 500px;
+            height: 350px;
+            background-color: rgb(167, 165, 163);
+            padding-top: 30px;
+        }
+        #log{
+            width: 150px;
+            height: 30px;
+            background-color: rgb(170, 14, 232);
+            color: white;
+            border: none;
+            
+        }
+    </style>  
+</head>    
+<body> <center>  
+    <div id="log1"> 
+    <h1 style="color: brown;">Login Page</h1><br>    
+    <div class="login">    
+    <form id="login" method="POST" >  
+        {% csrf_token %}  
+        <label><b>User Name   <br> <br> 
+        </b>    
+        </label>    
+        <input type="text" name="a_id" id="Uname" placeholder="Username">    
+        <br><br>    
+        <label><b>Password     <br><br>
+        </b>    
+        </label>    
+        <input type="Password" name="a_pass" id="Pass" placeholder="Password">    
+        <br><br>    <br>
+        <!-- <input type="button" name="log" id="log" value="Log In Here">        -->
+        <button id="signin" name="signin" class="btn btn-primary btn-block">Log In</button>
+        <h3 style="color: darkred;">{{error_msg}}</h3>
+         
+        <br><br>    
+           
+    </form>
+</div>     
+</div> 
+</center>
+</body>    
+</html> 
